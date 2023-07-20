@@ -58,6 +58,7 @@ html{
 }
 .menu_link ul li{
     font-size: 1.8rem;
+    
 }
 .menu_link ul li a{
     text-transform: capitalize;
@@ -69,7 +70,15 @@ html{
     color: rgba(0, 0, 3, 1);
     text-decoration: underline;
     transition: 0.5s;
- }
+}
+.active_class{
+    color: #285AEB;
+    text-decoration: underline;
+}
+.notactive_class{
+    color: #000;
+    text-decoration: none;
+}
 
 
 
@@ -91,6 +100,10 @@ html{
     text-align: right;
     font-size: 3rem;
 }
+.social_media .hamburger_menu{
+    display: none;
+}
+
 .facebook{
     color: rgba(18, 18, 237, 0.874);
     background-color: #fff;
@@ -121,6 +134,98 @@ html{
     background-color: #000;
     border: none;
 }
+
+@media screen and (max-width: 1080px) {
+    .main_nav{
+        height: 8rem;
+        grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+    }
+
+    .logo, .menu_link ul, .social_media ul{
+        height: 8rem;
+    }   
+}
+
+@media screen and (max-width: 998px) {
+    .main_nav{
+        height: 7rem;
+        grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+    }
+
+    .menu_link{
+        display: none;
+    }
+    
+    .logo, .social_media ul {
+        height: 7rem;
+    }
+
+    .mobile-menu-link{
+        grid-column: 2/4;
+        position: relative;
+        z-index: 99;
+    }
+    .mobile-menu-link{
+        background-color: white;
+        height: 20rem;
+        display: grid;
+        grid-column: 2/5;
+        align-items: center;    
+        padding-left: 3rem;
+        transition: all 2s linear;
+        transform-origin: top;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .mobile-menu-link ul {
+        height: 20rem;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .mobile-menu-link ul li:first-child{
+        transition-delay: 0.2s;
+    }
+
+    .social_media{
+        grid-row: 1/2;
+        grid-column: 3/5;
+        justify-content: end;
+        align-items: center;
+        transition: all 2s linear;
+    } 
+
+    .social_media .social_media_desktop {
+        height: 0;
+        display: none;
+    }
+
+    .social_media{
+        height: 7rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .social_media .hamburger_menu{
+        display: block;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:514px){
+    .main_nav{
+        height: 7rem;
+        grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+    }
+    .logo{
+        grid-row: 1/1;
+        grid-column: 2/4;
+    }
+}
+
+
 
 
 
